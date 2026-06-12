@@ -1,0 +1,245 @@
+Here is an HTML table that lists websites with their names and clickable URLs, ready for you to use or customize.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Website List Table | Names & URLs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f4f7fc 0%, #e9eef3 100%);
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .table-container {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(1px);
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.05);
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .table-header-caption {
+            margin-bottom: 1.5rem;
+            text-align: left;
+            padding-left: 0.5rem;
+        }
+
+        .table-header-caption h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #1F2B3C, #2C3E50);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+            display: inline-block;
+        }
+
+        .table-header-caption p {
+            color: #4a627a;
+            margin-top: 0.35rem;
+            font-weight: 450;
+            font-size: 0.95rem;
+        }
+
+        /* modern table styling */
+        .website-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 5px 14px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .website-table thead tr {
+            background: #1e2f3f;
+            background: linear-gradient(98deg, #1a2a38 0%, #1f3446 100%);
+        }
+
+        .website-table th {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            color: #f0f6ff;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .website-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #e4e9f0;
+            color: #1e2a36;
+            font-size: 0.95rem;
+            vertical-align: middle;
+            transition: background 0.2s;
+        }
+
+        .website-table tbody tr:hover td {
+            background-color: #f8fafd;
+        }
+
+        /* url link styling */
+        .url-link {
+            text-decoration: none;
+            font-weight: 500;
+            color: #1f6392;
+            border-bottom: 1px dashed #9bb7d0;
+            transition: all 0.2s;
+            word-break: break-all;
+        }
+
+        .url-link:hover {
+            color: #0d3b58;
+            border-bottom-style: solid;
+            border-bottom-color: #0d3b58;
+        }
+
+        /* badge / website name subtle style */
+        .site-name {
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .favicon-placeholder {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #dce5ef;
+            border-radius: 4px;
+            font-size: 11px;
+            text-align: center;
+            line-height: 18px;
+            color: #2c4a6e;
+        }
+
+        /* footer / note */
+        .table-footer-note {
+            margin-top: 1.5rem;
+            padding: 0.8rem 1rem 0.2rem 1rem;
+            font-size: 0.8rem;
+            color: #4b6a8b;
+            background: #f0f4f9;
+            border-radius: 50px;
+            text-align: center;
+            display: inline-block;
+            width: auto;
+        }
+
+        /* responsive scroll for small devices */
+        @media (max-width: 640px) {
+            .table-container {
+                padding: 0.9rem;
+            }
+            .website-table th,
+            .website-table td {
+                padding: 0.85rem 1rem;
+            }
+            .url-link {
+                font-size: 0.85rem;
+            }
+            .table-header-caption h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b9c7da;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="table-container">
+    <div class="table-header-caption">
+        <h2>📋 curated website index</h2>
+        <p>hand-picked resources & references · clean, clickable table</p>
+    </div>
+
+    <div style="overflow-x: auto; border-radius: 24px;">
+        <table class="website-table">
+            <thead>
+                <tr>
+                    <th scope="col">🌐 Website Name</th>
+                    <th scope="col">🔗 URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1: Example / Reference website (placeholder also shows structure) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">🌍</span> Example Domain</td>
+                    <td><a href="https://example.com" class="url-link" target="_blank" rel="noopener noreferrer">https://example.com</a></td>
+                </tr>
+                <!-- Row 2: Google (most used) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">G</span> Google</td>
+                    <td><a href="https://www.google.com" class="url-link" target="_blank" rel="noopener noreferrer">https://www.google.com</a></td>
+                </tr>
+                <!-- Row 3: GitHub (developers) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">🐙</span> GitHub</td>
+                    <td><a href="https://github.com" class="url-link" target="_blank" rel="noopener noreferrer">https://github.com</a></td>
+                </tr>
+                <!-- Row 4: Stack Overflow (Q&A) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">📚</span> Stack Overflow</td>
+                    <td><a href="https://stackoverflow.com" class="url-link" target="_blank" rel="noopener noreferrer">https://stackoverflow.com</a></td>
+                </tr>
+                <!-- Row 5: Wikipedia (encyclopedia) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">📖</span> Wikipedia</td>
+                    <td><a href="https://www.wikipedia.org" class="url-link" target="_blank" rel="noopener noreferrer">https://www.wikipedia.org</a></td>
+                </tr>
+                <!-- Row 6: MDN Web Docs (web reference) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">📘</span> MDN Web Docs</td>
+                    <td><a href="https://developer.mozilla.org" class="url-link" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org</a></td>
+                </tr>
+                <!-- Row 7: Reddit (social / communities) -->
+                <tr>
+                    <td class="site-name"><span class="favicon-placeholder">🤖</span> Reddit</td>
+                    <td><a href="https://www.reddit.com" class="url-link" target="_blank" rel="noopener noreferrer">https://www.reddit.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-footer-note">
+        ⚡ <strong>first row = header</strong> (Website Name & URL) • all links open in a new tab for easy browsing • add or remove rows as needed
+    </div>
+</div>
+</body>
+</html>
+```
